@@ -1,0 +1,15 @@
+A:\git\ITVDN.COM\001_Classes\001_Classes\bin\Debug\net5.0\001_Classes.exe
+A:\git\ITVDN.COM\001_Classes\001_Classes\bin\Debug\net5.0\001_Classes.deps.json
+A:\git\ITVDN.COM\001_Classes\001_Classes\bin\Debug\net5.0\001_Classes.runtimeconfig.json
+A:\git\ITVDN.COM\001_Classes\001_Classes\bin\Debug\net5.0\001_Classes.runtimeconfig.dev.json
+A:\git\ITVDN.COM\001_Classes\001_Classes\bin\Debug\net5.0\001_Classes.dll
+A:\git\ITVDN.COM\001_Classes\001_Classes\bin\Debug\net5.0\ref\001_Classes.dll
+A:\git\ITVDN.COM\001_Classes\001_Classes\bin\Debug\net5.0\001_Classes.pdb
+A:\git\ITVDN.COM\001_Classes\001_Classes\obj\Debug\net5.0\001_Classes.GeneratedMSBuildEditorConfig.editorconfig
+A:\git\ITVDN.COM\001_Classes\001_Classes\obj\Debug\net5.0\001_Classes.AssemblyInfoInputs.cache
+A:\git\ITVDN.COM\001_Classes\001_Classes\obj\Debug\net5.0\001_Classes.AssemblyInfo.cs
+A:\git\ITVDN.COM\001_Classes\001_Classes\obj\Debug\net5.0\001_Classes.csproj.CoreCompileInputs.cache
+A:\git\ITVDN.COM\001_Classes\001_Classes\obj\Debug\net5.0\001_Classes.dll
+A:\git\ITVDN.COM\001_Classes\001_Classes\obj\Debug\net5.0\ref\001_Classes.dll
+A:\git\ITVDN.COM\001_Classes\001_Classes\obj\Debug\net5.0\001_Classes.pdb
+A:\git\ITVDN.COM\001_Classes\001_Classes\obj\Debug\net5.0\001_Classes.genruntimeconfig.cache
