@@ -41,10 +41,10 @@ namespace _003_Classes
          //Для класса Ship — количество пассажиров и порт приписки.
          //Написать программу, которая выводит на экран информацию о каждом средстве передвижения.
 
-         //Plane plane = new Plane(5, 10, 10000000, 350, 1981, 50, 60);
-         //plane.Show();
-         //Ship ship = new Ship(10, 10, 10000000, 35, 2000, 3000, "home");
-         //ship.Show();
+         Plane plane = new Plane(5, 10, 10000000, 350, 1981, 50, 60);
+         plane.Show();
+         Ship ship = new Ship(10, 10, 10000000, 35, 2000, 3000, "home");
+         ship.Show();
 
          //Задание 4
          //Используя Visual Studio, создайте проект по шаблону Console Application.  
@@ -63,6 +63,8 @@ namespace _003_Classes
          systemKey.Add("1234", "ProDocumentWorker" );
          systemKey.Add("4321", "ExpertDocumentWorker");
 
+         DocumentWorker doc = new DocumentWorker();
+
          Console.WriteLine("У вас есть ключ доступа? Yes or No");
          string answer = Console.ReadLine();
          if (answer == "Yes")
@@ -72,28 +74,28 @@ namespace _003_Classes
             if (systemKey[userKey] == "ProDocumentWorker")
             {
                Console.WriteLine("Вам доступна про версия");
-               DocumentWorker pro = new ProDocumentWorker();
-               pro.OpenDocument();
-               pro.EditDocument();
-               pro.SaveDocument();
+               doc = new ProDocumentWorker();
+               doc.OpenDocument();
+               doc.EditDocument();
+               doc.SaveDocument();
             }
             else if (systemKey[userKey] == "ExpertDocumentWorker")
             {
                Console.WriteLine("Вам доступна експерт версия:");
-               DocumentWorker expert = new ExpertDocumentWorker();
-               expert.OpenDocument();
-               expert.EditDocument();
-               expert.SaveDocument();
+               doc = new ExpertDocumentWorker();
+               doc.OpenDocument();
+               doc.EditDocument();
+               doc.SaveDocument();
             }
 
          }
          else if (answer == "No")
          {
             Console.WriteLine("Вам доступна бесплатная версия");
-            DocumentWorker free = new DocumentWorker();
-            free.OpenDocument();
-            free.EditDocument();
-            free.SaveDocument();
+            doc = new DocumentWorker();
+            doc.OpenDocument();
+            doc.EditDocument();
+            doc.SaveDocument();
          }
       }
    }

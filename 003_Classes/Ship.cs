@@ -21,6 +21,7 @@ namespace _003_Classes
          passengers = _passengers;
          homePort = _homePort;
       }
+
       public void Show()
       {
          Console.WriteLine("Ship");
