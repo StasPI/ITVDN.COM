@@ -25,7 +25,7 @@ namespace _007_Classes
 
          List<Train> t1 = new List<Train>();
          t1.Add(new Train("a", 1, DateTime.Now));
-
+ 
          ////Задание 3
          ////Создайте класс MyClass и структуру MyStruct, которые содержат в себе поля public string change.
          ////В классе Program  создайте два  метода:  
