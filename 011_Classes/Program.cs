@@ -22,7 +22,7 @@ namespace _011_Classes
          //}
 
          ////// другое название метода для получения длины массива
-         //for (int i=0; i < arrayList.Count; i++) 
+         //for (int i = 0; i < arrayList.Count; i++)
          //{
          //   Console.WriteLine(arrayList[i]);
          //}
@@ -76,7 +76,7 @@ namespace _011_Classes
          //for (int i = 0; i < m.Length; i++)
          //{
          //   Console.WriteLine(m[i]);
-         //}   
+         //}
 
       }
    }
