@@ -7,26 +7,24 @@ using System.Threading.Tasks;
 
 namespace task4
 {
-   class MyList<T> : IEnumerator, IEnumerable
+   class MyList<T> : IEnumerable<T>
    {
       int position = -1;
       private T[] array;
+
+      public MyList()
+      {
+         array = new T[0];
+      }
+
       public int Count
       {
-         get
-         {
-            return array.Length;
-         }
+         get { return array.Length; }
       }
 
       public object Current
       {
          get { return array[position]; }
-      }
-
-      public MyList()
-      {
-         array = new T[0];
       }
 
       public void Add(T param)
@@ -51,29 +49,46 @@ namespace task4
          get { return array[index]; }
       }
 
-      IEnumerator IEnumerable.GetEnumerator()
-      {
-         return this as IEnumerator;
-      }
-
       //следующий элемент
-      public bool MoveNext()
-      {
-         if (position < array.Length - 1)
-         {
-            position++;
-            return true;
-         }
-         else
-         {
-            Reset();
-            return false;
-         }
-      }
+      //public bool MoveNext()
+      //{
+      //   if (position < array.Length - 1)
+      //   {
+      //      position++;
+      //      return true;
+      //   }
+      //   else
+      //   {
+      //      Reset();
+      //      return false;
+      //   }
+      //}
 
       public void Reset()
       {
          position = -1;
+      }
+
+      public IEnumerator<T> GetEnumerator()
+      {
+         while (true)
+         {
+            if (position < array.Length - 1)
+            {
+               position++;
+               yield return array[position];
+            }
+            else
+            {
+               Reset();
+               yield break;
+            }
+         }
+      }
+
+      IEnumerator IEnumerable.GetEnumerator()
+      {
+         return GetEnumerator();
       }
    }
 }

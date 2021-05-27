@@ -11,15 +11,15 @@ namespace task4
          ml.Add(1);
          ml.Add(2);
 
-         foreach (int m in ml)
+
+         int[] arr = ml.GetArray();
+
+         foreach (int ar in arr)
          {
-            Console.WriteLine(m);
+            Console.WriteLine(ar);
          }
-         foreach (int m in ml)
-         {
-            Console.WriteLine(m);
-         }
-         Console.WriteLine(ml[1]);
+
+         Console.WriteLine(arr[1]);
       }
    }
 }
