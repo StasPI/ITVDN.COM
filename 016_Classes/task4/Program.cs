@@ -6,7 +6,11 @@ namespace task4
    {
       static void Main(string[] args)
       {
-         Console.WriteLine("Hello World!");
+         MyDate one = new MyDate(17, 09, 1988);
+         MyDate two = new MyDate(17, 09, 2021);
+         MyDate three = new MyDate(17, 12, 2021);
+         MyDate foure = new MyDate(17, 09, 2021);
+
       }
    }
 }
