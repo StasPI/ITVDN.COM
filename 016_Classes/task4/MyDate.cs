@@ -8,63 +8,58 @@ namespace task4
 {
    class MyDate
    {
-      private int day;
-      private int month;
-      private int year;
+      readonly DateTime date;
+      private int days;
+      string type;
 
-      public int Day 
+      public MyDate(DateTime date)
       {
-         get { return day; }
-         set 
+         this.date = date;
+      }
+
+      public MyDate(int days)
+      {
+         this.days = days;
+         this.type = "days";
+      }
+
+      public static MyDate operator -(MyDate date1, MyDate date2)
+      {
+         TimeSpan timeSpan = date1.date - date2.date;
+         DateTime newDate = date1.date.AddDays(timeSpan.Days);
+         return new MyDate(Math.Abs(timeSpan.Days));
+      }
+
+      public static MyDate operator +(MyDate date1, MyDate date2)
+      {
+         DateTime newDate = date1.date.AddDays(Convert.ToDouble(date2.ToInt()));
+         return new MyDate(newDate);
+      }
+
+      public static MyDate Add(MyDate d1, MyDate d2)
+      {
+         return d1 + d2;
+      }
+
+      public override string ToString()
+      {
+         if (this.type == "days")
+            return "Даней: " + days;
+         else
+            return "Дата: " + date;
+      }
+
+      public int ToInt()
+      {
+         if (this.type == "days")
+            return days;
+         else
          {
-            if ((1 <= value) & (value <= 31))
-               day = value;
-            else
-               throw new Exception("Введеное число не корректно, день не может быть меньше 1 и больше 31");
+            TimeSpan timeSpan = this.date - new DateTime(0001,01,01);
+            return Math.Abs(timeSpan.Days);
          }
+
       }
 
-      public int Month
-      {
-         get { return month; }
-         set
-         {
-            if ((1 <= value) & (value <= 12))
-               month = value;
-            else
-               throw new Exception("Введеное число не корректно, месяц не может быть меньше 1 и больше 12");
-         }
-      }
-
-      public int Year
-      {
-         get { return year; }
-         set
-         {
-            if (1 <= value)
-               year = value;
-            else
-               throw new Exception("Введеное число не корректно, год не может быть меньше или равен 0");
-         }
-      }
-
-      public MyDate(int day, int month, int year)
-      {
-         Day = day;
-         Month = month;
-         Year = year;
-      }
-
-      public static MyDate operator -(MyDate A, MyDate B)
-      {
-         int d;
-         int m;
-         int y;
-         d = A.Day - B.Day;
-         m = A.Month - B.Month;
-         y = A.Year - B.Year;
-
-         return new MyDate (1,1,1);
-      }
    }
 }

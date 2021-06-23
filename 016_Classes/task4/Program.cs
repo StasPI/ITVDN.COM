@@ -6,11 +6,14 @@ namespace task4
    {
       static void Main(string[] args)
       {
-         MyDate one = new MyDate(17, 09, 1988);
-         MyDate two = new MyDate(17, 09, 2021);
-         MyDate three = new MyDate(17, 12, 2021);
-         MyDate foure = new MyDate(17, 09, 2021);
+         MyDate one = new MyDate(DateTime.Now);
+         MyDate two = new MyDate(new DateTime(1989, 10, 18));
+         MyDate three = new MyDate(2);
 
+         Console.WriteLine($"Первая {one }");
+         Console.WriteLine($"Вторая {two }");
+         Console.WriteLine($"Между ними {one - two}");
+         Console.WriteLine(MyDate.Add(two, three).ToString());
       }
    }
 }
